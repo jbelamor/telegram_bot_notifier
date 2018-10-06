@@ -1,14 +1,14 @@
-#Telegram bot notificator
+# Telegram bot notificator
 
 This system is composed by two parts:
 
-##Telegram bot
+## Telegram bot
 This is a class that stablish the communication with telegram, receiving the commands and sending the responses to the people.
 It will open an internal port where it will be listening for intern commands or messages and forward them to the user through telegram.
 
-###Usage
+### Usage
 
-####Configuration
+#### Configuration
 Fill the options at the file config.py.
 The config file has 4 arguments:
 - api_key: the api key the bot you have previously created through BotFather
@@ -22,17 +22,17 @@ config = {'api_key':'your_api_key',
           'db_name':'chats_ids'
 }
 ```
-####Run the bot
+#### Run the bot
 `Usage: bot.py config.py`
 
 > Once the bot is running, the users that will recieve the notifications, needs to text first to the bot, in order to be registered at the database.
 
-##Auxiliar class
+## Auxiliar class
 
 This class will be included in those programs that the programmer wants to send messages through telegram in an easy way.
 The auxiliar clase will be invoked with only an argument, the port where it should be listening.
 
-###Usage:
+### Usage:
 Import the class and invoque the function `send_msg(user, message)` with the user who will receive the message.
 > The user needs to be previously registered to receive the message
 > `config.py` file needs to be in the same folder
